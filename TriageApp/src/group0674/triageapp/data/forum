@@ -1,0 +1,231 @@
+Nov 2. 12:36 am:
+Hey, I thought we could use a forum because log messages are too short. I fully implemeneted Patient (Under assumption that birth date is inputted as type Birthdate). As for the ageLTwo() method in Birthdate, it will just return False for now. I asked a question on piazza and I'll finish that method as soon as I get a reply, java.util.Date is more tricky than I thought. 
+I also wrote a read() method in Nurse.java, as well as the constructor. read() creates a new text file in the package for the very first Nurse created. Then, it just adds the nurses to the text file. I was not able to test it, though I did a mock version of it on my laptop and it worked fine. We could possibly reuse it to update Patient's data? 
+As for Patient save and load, technically we could save that data as we want since we have control over how we write and format this (for example):
+cardID, name, [year, month, day], [[time, vital signs],[time, vital signs],[time, vital signs]] <- new line for every patient
+^ or any format wse commas e can all agree on.
+Then we could parand then while doing that parse the lists and create the objects. 
+Anna. 
+
+Nov 2. 1:40 AM:
+Hey, good idea Anna. I just wanted to say that I implemented VitalSigns, Record, and PatientInfo. 
+It looks like some of the classes **may** need some polishing, but I think when we finish Nurse
+everything will seem clearer. I'm going to call it a night.
+-Makram
+
+Nov 2, 1:30 PM
+Hey, I added toString() methods to some classes so we can use them to write into files.
+Also, I just realized, let's say whenever a new Nurse is constructed she is added into the file. 
+But then when we reload the app, it'll go through the file and construct all the objects in the file and add them again, the second time. 
+I think the construct will have to check if the Nurse that is being created is already in the file? 
+Anna.
+
+Nov 2, 6:41 PM:
+Alright, I modified a couple of things. We're no longer using a Map interface to store the maps in PatientInfo,
+we're using a SortedMap interface, because we want to know what the most recent symptoms and most recent VitalSigns
+are.
+-Makram
+
+Nov 2, 7:26
+Read through most of the new code, the patient info setcurrentsymptoms takes a string but doesn't actually seem to add
+the string/date into the map? Going to finish reading through the new code and going to start implementing the unfinished.
+-Yev
+
+Nov 2, 7:55
+Just deleted setCurrentSymptom from patient info since the addSymptom was the same thing, and there is no reason why
+we need to separate them. 
+-Yev 
+
+Nov 2, 8:06:
+I'm going to get started on creating the new activities and the intents that connect them. I'll also modify the
+android manifest file to reflect the fact that we will have more than one activity in our app.
+-Makram
+
+Nov 2, 8:39:
+Alright, I added the minimum number of activities we need for the app, and created their layouts. I also modified 
+the AndroidManifest.xml file to reflect that we have more than one activity in our application. I also have the code
+for the login screen and the nurse registration screen, but they just need a little tweaking (they're also in
+a toy app I made on the side, just to test it out). I'll get most of the UI finished tomorrow, and we also need to
+figure out how the nurse is going to use tabs (though this is definitely possible; its one of the default options
+in the android app creation. just create a new app and it'll ask for the default theme/activity layout, and one of
+them has tabs)
+-Makram
+
+Nov 2, 9:02
+I've looked through and edited about all I can at this point, tomorrow I'm going to research XML related stuff and help
+you.
+-Yev
+
+Nov 3, 2:30:
+I implemented the Nurse's save and load. As far as I remember, the first screen has two options. Create or log in a nurse. So I wrote two methods, logIn() returns true of the Nurse's information matches that of Nurse.txt. registerNurse() writes into Nurses.txt file. This should work if it's like:
+- If logIn(get input name, get input pass): (Create a nurse Object and use it to manipulate Patients)
+Also, I think we might be having an overwrite issue. I swear Birthdate docstrings went missing and now I could not find toString() method in Nurse :P.
+-Anna. 
+
+
+Nov 3, 11:44 AM:
+I added the UI's for the login screen and the registration screen. I put in a bogus logo and picture for our app,
+which is just a nurse. If any of you guys can do something better, don't hesitate to do so :P. I'm still trying
+to figure out if we will have tabs for the NurseLoggedActivity; and we still need to figure out how to make the
+PatientViewActivity; I'm thinking it should be sort of a list view, where you can scroll down. We also need to
+add update vitals and update symptoms functionalities to that activity.
+-Makram
+
+
+Nov 3, 1:09pm
+Hey sorry I'm just starting to work on this now for the rest of the day, just trying to see what needs to be done & I'll get it done. 
+I'm still having problems with the project paths not working so I just can't run anything.
+ageLTwo() in Birthdate is now returning bdayPlusTwo.before(today) since shouldn't it be whether the person has turned 2 before the current date since it ought to return true if the age is less than two
+I filled in the lookupPatient in Nurse
+Changed the setSeenByDoctor() to not take in a boolean - the method is only called when the patient has been seen by a doctor, it will only ever be set to true when called.
+- Theresa
+
+Nov 3 5:58pm
+I've removed the registerNurse() and moved the code into the constructor since creating a nurse should be registering it and registering a nurse is creating it, so it seemed redundant.
+I'm currently working on a Patient_Register thing for registering new patients
+- Theresa
+
+Nov 3, 6:11:
+Okay I should be able to work on this for awhile now, maybe we should have kept a list on what needs to be done.
+Going to scan the various code and see if I can finish up some of it.
+-Yev
+
+Nov 3, 6:39:
+Just finished another app that kept track of contacts using an SQLite database. It's really not that hard. Here's the
+link that I used for guidance: http://www.androidhive.info/2011/11/android-sqlite-database-tutorial/.
+Also, it seems like this writing to file stuff is really tedious for no apparent reason. If you guys read this and decide
+that it's worth doing, I think we should do it, because apparently we get extra marks for using a database and not
+a text file.
+-Makram
+
+Nov 3, 8:08:
+That's definitely something we can discuss tomorrow at the status meeting.
+-Yev
+
+Nov 3, 8:46:
+Alright so heres what needs to be done:
+1. We need to add the functionality of the nurse adding a patient to the system (i.e to the file system)
+2. We need to add the functionality of the nurse being able to see all her patients
+in a list-view (and that activity is PatientViewActivity)
+3. We also need to add the functionality of the nurse updating 
+the vital signs and symptoms of the patient
+from the PatientViewActivity screen
+-Makram
+
+Nov 3, 9:12pm:
+I've removed the addPatientToFile() and moved it to the constructor
+since that should be done as soon as a Record is created and it's never called otherwise.
+- Theresa
+
+Nov 3, 10:41pm:
+NurseRegisterActivity.java and PatientRegisterActivity.java 
+should be adding in the new nurses and patients that are being created.
+Nothing's been done yet about writing the patients into text files though; 
+the nurse already has in its constructor something for
+writing into the text file so that's being called when 
+the Nurse constructor is being called in NurseRegisterActivity().
+- Theresa
+
+Nov 4, 8:33
+You are implementing the Database right now? Went to try to submit mine and it had a huge conflict! xD
+-Yev
+
+Nov 4, 8:43
+I think we might also need to split vital signs into (Temperature, Systolic, Diastolic, Heart Rate) just like Birthdate. Going to do that now.
+EDIT: Wait, I think I need to confirm this before we need to actually change this, might be wrong.
+-Yev
+
+Nov 4, 10:01
+I'm thinking that we will want to pull up the vital signs from the database, so I'm going to start working on that
+-Yev
+
+Nov4, 10:41
+Okay I think we got the database pretty much done, tomorrow evening I can connect the other methods to it if Anna doesn't already do it before I get back.
+Also, Wednesday I guess I can start doing the readme and finishing the docstrings since that is apparently half our grade? (As you know I have pretty much
+the whole day free). Also, if we still need things done on wednesday post it here.
+-Yev
+
+Nov 4, 10:56 pm:
+We still need to do the nurses table so I'm going to get started on that now. Turns out we can
+do it in the same DatabaseHelper class. We also need to figure out how to do the following:
+1. Create the database when the application starts, and when a nurse registers, add that
+nurse to the nurses table.
+2. In the nurse logged in view, when she clicks to add a patient and goes to the
+patient register activity, there needs to be some sort of code there that adds the patient
+to the records table.
+3. The updating vital signs and retaining older values part has to be implemented somehow; we
+can keep track of the latest vital signs in the database, but then the older values become only
+temporary because they're stored in a SortedMap.
+-Makram
+
+Nov 5, 2 pm
+Hey everybody, I'll try to finish up the database tonight.
+I think somebody already wrote out the addNurse and such methods, so figuring how 
+to start the database is all we have left. (Which is what I'll try to finish tonight).
+By the way, that issue with random folders in SVN we had during the 
+tutorial was most likely my fault, I am sorry about that.
+Also, if I get Database finished tonight, I can start testing right? 
+Under the assumption that all of the acitivies are written?
+Best, Anna. 
+
+Nov 5, 7 40 pm
+Hey, I got some Nurse logging in done but it crushes and I am not sure why. I am going to start heading out of BA and 
+continue this Java battle later on tonight. I also made some changes and extended all acitives to MainActivity so 
+the database can be shared. I am also doubting the need of NurseLoggedInActivity because at the point, I am checking
+if she is in the database and if she is, let her get into the patientview. When I try to log in, it crashes on 
+" String password = nursePassword.getText().toString(); " line 49. I'll try to put this into the exception block
+but that won't help it 'see' the password, Either way, it's coming along.
+- Anna
+
+Nov 6, 12:30 am
+My emulator won't load up so I can't see if LogIn works until tomorrow. I will fix up style and such meanwhile and test Log In tomorrow evening.
+- Anna
+ 
+Nov 6, 1:30 am I wrote docstrings and fixed up style for all of the backend classes, 
+I left some of the commented out code but i'll remove it Thursday morning because it 
+for sure won't be used until then. 
+Anna. 
+
+
+Nov 18, 8:17 pm
+Alright guys heres the deal with the Manager type class: we can't really do an abstract class
+because we need the class to hold an instance of the type of data it is managing (like the 
+RecordManager class does for the class example). Also, it doesn't reduce any code duplication
+if we use inheritance, because we need to use a different String.split for patients than 
+for nurses and physicians. I propose we do a manager interface with the methods readFromFile,
+saveToFile, and an appropriate constructor for each one.
+-Makram
+
+Nov 21, 6:42 pm
+Scratch what I said earlier: the Manager class is now abstract with one abstract method, which
+is lookupPatient. I still don't know how this method is going to be implemented, because we 
+don't have access to a PatientManager object. One way to solve this problem is to pass in a 
+PatientManager object into the method, and get the patientMap from there. This is a good 
+solution because we're going to be passing around the PatientManager between activities 
+anyways.
+
+In other news, the saveToFile and readFromFile are almost done, they just need to be called 
+correctly from the activities. We need to use the directory that she told us to use on 
+Piazza (using this.getApplicationContext().getFilesDir()). Read her code carefully and
+see how she creates her RecordManager object; we should be doing it in a similar way.
+-Makram
+
+Nov 21, 7:01 pm
+Added a generic interface called Scannable<T>, which is basically the same as her
+Recordable<K, V> interface, except with one less parameter on the types. I added this 
+method so that we can create Nurse, Physician, and Record objects from an array of 
+Strings.
+-Makram
+
+Nov 21, 7:21 pm
+Added another generic interface called Infoed<K>, which is somewhat similar to Jens
+IDed<T> interface. I also made the UserManager generic. The reason for this is that
+we can't possibly know at compile time whether the User type will be a Physician or
+a Nurse, unless we read the file and find out that the userType is a Nurse or Physician.
+
+Also, to read things from the file for Physicians and Nurses, we need to put them into
+the map as Physicians and Nurses, and not as Users. This produces more code because 
+we have two interfaces, but they're generic so it's not a big big deal. We still have to 
+instantiate two different UserManager<T> classes, one for Physicians and one for 
+Nurses, but since there is only one physician and one nurse, this isn't that bad.
+-Makram

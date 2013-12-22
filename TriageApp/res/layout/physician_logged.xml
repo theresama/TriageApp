@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <TextView
+        android:id="@+id/displayName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/physician_logged_name"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginLeft="6dip" />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+        
+        <Button
+            android:id="@+id/lookupPatient"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lookup_patient" />
+
+        <Button
+            android:id="@+id/prescribeButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/updatep" />
+        
+        <Button
+            android:id="@+id/save"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="saveToFile"
+            android:text="@string/save" />
+
+        <Button
+            android:id="@+id/logout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="logout"
+            android:text="@string/logout" />
+
+    </LinearLayout>
+
+</LinearLayout>

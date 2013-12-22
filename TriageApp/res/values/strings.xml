@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TriageApp</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="nurse_logged">Logged In as Nurse</string>
+    <string name="nurse_see_patients">See Patients</string>
+    <string name="nurse_register">Register as a Nurse</string>
+    <string name="patient_view">Patient View Activity</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="nurse_username">Nurse Username</string>
+    <string name="nurse_password">Nurse Password</string>
+    <string name="login">Login</string>
+    <string name="nurse_login">Login as Nurse</string>
+    <string name="nurse_register_account">New Account? Register Here</string>
+    <string name="nurse_uname">Desired Username</string>
+    <string name="nurse_pword">Desired Password</string>
+    <string name="nurse_finalize_registration">Register!</string>
+    <string name="nurse_has_account">Already have an Account? Click Here!</string>
+    
+    <string name="patient_name">Patient Name</string>  
+    <string name="patient_dob">Patient Birthdate</string>
+    <string name="patient_year">Year</string>
+    <string name="patient_cardNum">Health Card Number</string>
+    <string name="new_patient">Create Patient</string>
+    
+    <string name="birthday">Birthday</string>
+    <string name="prescription">Prescription</string>
+    <string name="seen_by_doctor">Seen By Doctor</string>
+    <string name="vital_signs">Vital Signs</string>
+    
+    <string name="year">Year</string>
+    <string name="month">Month</string>
+    <string name="day">Day</string>
+    
+    <string name="patient_register">Patient Register Activity</string>
+    <string name="patient_register_birthday">Set Birthday</string>
+    <string name="create_new_patient">Create Patient</string>
+    
+    <string name="update_patient">Update Patient</string>
+    <string name="temperature">Temperature</string>
+    <string name="systolic_pressure">Systolic Pressure</string>
+    <string name="diastolic_pressure">Diastolic Pressure</string>
+    <string name="heart_rate">Heart Rate</string>
+    <string name="update">Update!</string>
+    
+    <string name="nurse_logged_view">View Patients</string>
+    <string name="nurse_logged_add">Register Patient</string>
+    <string name="prescription_instructions">Instructions</string>
+    <string name="updatep">Prescribe a drug</string>
+    <string name="prescribe">Prescribe and Save</string>
+    <string name="medication">Medication</string>
+    <string name="set">Update</string>
+    <string name="physicianLogin">Login as Physician</string>
+    
+    <string name="nurse_logged_name"></string>
+    <string name="physician_logged_name"></string>
+    
+    <string name="arrival_time_activity">Arrival Time</string>
+    <string name="patient_lookup_activity">Patient Lookup</string>
+    <string name="physician_update_activity">Update</string>
+    <string name="prescription_activity">Add Prescription</string>
+    <string name="urgency_list_activity">Urgency List</string>
+    <string name="patient_info_activity">Patient Info</string>
+    <string name="patient_update_activity">Update Patient</string>
+    <string name="physician_logged">Physician Logged In</string>
+
+    <string name="lookup_patient">Look up Patient</string>
+    <string name="view_by_urgency">View Patients by Urgency</string>
+    <string name="view_by_arrival">View Patients By Arrival</string><string name="patient_update">Update Patient</string>
+    
+    <string name="home">Home</string>
+    <string name="logout">Logout</string>
+    <string name="save">Save Changes</string>
+    
+    
+    
+</resources>

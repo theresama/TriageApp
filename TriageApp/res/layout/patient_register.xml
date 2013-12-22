@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/goHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="goHome"
+            android:text="@string/home" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="fill_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:text="@string/patient_name"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <EditText
+            android:id="@+id/patientnewname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:ems="10"
+            android:inputType="textPersonName" >
+
+            <requestFocus />
+        </EditText>
+
+        <!-- <TextView
+            android:id="@+id/enterBirthday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/patient_dob"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <EditText
+            android:id="@+id/patient_dob_year"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/year"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/patient_dob_month"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/month"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/patient_dob_day"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/day"
+            android:inputType="number" /> -->
+        
+        <Button android:id="@+id/myDatePickerButton"
+       	 	android:layout_width="match_parent"
+       	 	android:layout_height="wrap_content"
+       	 	android:layout_marginTop="20dip"
+        	android:text="@string/patient_register_birthday"/>
+
+		<TextView android:id="@+id/showMyDate"
+    		android:layout_width="fill_parent" 
+    		android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="20dip"
+            android:text="@string/patient_cardNum"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <EditText
+            android:id="@+id/patient_cardNum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text" />
+        
+        <Button
+            android:id="@+id/new_patient"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="0.19"
+            android:text="@string/new_patient" />
+    </LinearLayout>
+
+</ScrollView>
