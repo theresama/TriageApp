@@ -24,7 +24,6 @@ Register a patient by inputting their name, birthday, and health card number.
 Click the "set birthday" to select a birthday by datepicker; the date chosen
 will be shown on screen. Then confirm the selection using the "Create Patient"
 button. If the health card number you are trying to register already exists in the system, you'll recieve a toast message.
-Warning: Clicking the "Home" button to return to the Loggin In screen will crash after you register a patient due to a RunTimeError from NotSerializable in PatientInfo; however, registered Patients are being added and the Home button can be used if you do not add a patient. 
 
 V. Patient Look Up Screen:
 Look up a patient by inputting their health card number and clicking the
